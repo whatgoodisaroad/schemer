@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<title>jquery.schemer.js example page</title>
+	<style>
+            * {margin:0; padding: 0}
+            body {width: 600px; margin-left: auto; margin-right: auto; margin-top: 50px;}
+		h1, h2, p {text-align: center; margin: 1em;}		
+		h1 {margin-bottom: 50px;}
+		#panel {padding: 150px; border: 1px solid #CCCCCC;}
+		
+		/* color schemes defined here */
+		.blue {background-color: #5493e3; color: #243959;}
+		.blue #panel {background-color: #BAD5F5;}
+		.blue a {color: #3C669E;}
+		
+		.green {background-color: #10c799; color: #000;}
+		.green #panel {background-color: #A0EBD5;}
+		.green a {color: #0A8B6C;}
+		
+		.orange {background-color: #ff9150; color: #FFF;} 
+		.orange #panel {background-color: #FFD3BC;}
+		.orange a {color: #000}
+	</style>
+</head>
+
+<body>
+      <header>
+            <h1>Schemer.js test</h1>
+      </header>
+      
+      <div id="panel">
+      	<h2>Panel inside of the page</h2>
+            <p>This is a display panel inside the page, with a different color.</p>
+            <p><a href="#">This link will show up in different colors too.</a></p>
+      </div>
+      
+      <script src="jquery.schemer.js"></script>
+	<script>
+      //
+	// use $(window).load() to wait until all css, images and backgrounds have been loaded
+	//
+	$(window).load(
+		function() {
+	            $().schemer("blue", "green", "orange");
+		}
+	);
+      </script>
+
+</body>
+</html>
