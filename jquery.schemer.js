@@ -25,7 +25,7 @@
 //
 (function( $ ) 
 {
-	$.fn.schemer = function() 
+	$.schemer = function() 
 	{
 		// generate a random number matching the number of function arguments
 		var randomNumber = Math.floor(Math.random() * arguments.length);
